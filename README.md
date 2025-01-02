@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Evaluate the logarithm of [cumulative distribution function][cdf] Planck (discrete exponential) distribution.
+> Evaluate the logarithm of the [cumulative distribution function][cdf] Planck (discrete exponential) distribution.
 
 <section class="intro">
 
