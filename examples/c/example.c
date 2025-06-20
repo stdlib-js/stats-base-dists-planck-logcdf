@@ -25,10 +25,6 @@ static double random_uniform( const double min, const double max ) {
 	return min + ( v*(max-min) );
 }
 
-static int discrete_uniform( const int min, const int max ) {
-	return min + (rand() % (max - min + 1));
-}
-
 int main( void ) {
 	double lambda;
 	double x;
@@ -36,7 +32,7 @@ int main( void ) {
 	int i;
 
 	for ( i = 0; i < 25; i++ ) {
-		x = discrete_uniform( 0, 40 );
+		x = random_uniform( 0.0, 40.0 );
 		lambda = random_uniform( 0.1, 5.0 );
 		y = stdlib_base_dists_planck_logcdf( x, lambda );
 		printf( "x: %lf, λ: %lf, ln(F(x;λ)): %lf\n", x, lambda, y );

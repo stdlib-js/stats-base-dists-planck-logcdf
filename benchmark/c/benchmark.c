@@ -86,10 +86,6 @@ static double random_uniform( const double min, const double max ) {
 	return min + ( v*(max-min) );
 }
 
-static int discrete_uniform( const int min, const int max ) {
-	return min + (rand() % (max - min + 1));
-}
-
 /**
 * Runs a benchmark.
 *
@@ -104,7 +100,7 @@ static double benchmark( void ) {
 	int i;
 
 	for ( i = 0; i < 100; i++ ) {
-		x[ i ] = discrete_uniform( 0, 40 );
+		x[ i ] = random_uniform( 0.0, 40.0 );
 		lambda[ i ] = random_uniform( 0.1, 10.0 );
 	}
 
