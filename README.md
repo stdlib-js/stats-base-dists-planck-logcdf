@@ -53,38 +53,32 @@ where `λ` is the shape parameter and `x` denotes the count of events in a quant
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-planck-logcdf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-logcdf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-planck-logcdf@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var logcdf = require( 'path/to/vendor/umd/stats-base-dists-planck-logcdf/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-planck-logcdf@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.logcdf;
-})();
-</script>
+var logcdf = require( '@stdlib/stats-base-dists-planck-logcdf' );
 ```
 
 #### logcdf( x, lambda )
@@ -149,15 +143,10 @@ y = mylogcdf( 1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-planck-logcdf@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var uniform = require( '@stdlib/random-array-uniform' );
+var logcdf = require( '@stdlib/stats-base-dists-planck-logcdf' );
 
 var x = discreteUniform( 10, 0, 5 );
 var lambda = uniform( 10, 0.1, 5.0 );
@@ -168,11 +157,6 @@ for ( i = 0; i < lambda.length; i++ ) {
     y = logcdf( x[ i ], lambda[ i ] );
     console.log( 'x: %d, λ: %d, ln(F(x;λ)): %d', x[ i ].toFixed( 4 ), lambda[ i ].toFixed( 4 ), y.toFixed( 4 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -181,7 +165,103 @@ for ( i = 0; i < lambda.length; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/planck/logcdf.h"
+```
+
+#### stdlib_base_dists_planck_logcdf( x, lambda )
+
+Evaluates the logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution with shape parameter `lambda`.
+
+```c
+double out = stdlib_base_dists_planck_logcdf( 2, 0.5 );
+// returns ~-0.2525
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **lambda**: `[in] double` shape parameter.
+
+```c
+double stdlib_base_dists_planck_logcdf
+( const double x, const double lambda );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/planck/logcdf.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+static int discrete_uniform( const int min, const int max ) {
+    return min + (rand() % (max - min + 1));
+}
+
+int main( void ) {
+    double lambda;
+    double x;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        x = discrete_uniform( 0, 40.0 );
+        lambda = random_uniform( 0.1, 5.0 );
+        y = stdlib_base_dists_planck_logcdf( x, lambda );
+        printf( "x: %lf, λ: %lf, ln(F(x;λ)): %lf\n", x, lambda, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
