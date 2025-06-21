@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-20)
+## Unreleased (2025-06-21)
 
 <section class="features">
 
@@ -21,9 +21,9 @@
 
 ### Closed Issues
 
-This release closes the following issue:
+A total of 2 issues were closed in this release:
 
-[#4935](https://github.com/stdlib-js/stdlib/issues/4935)
+[#4935](https://github.com/stdlib-js/stdlib/issues/4935), [#7427](https://github.com/stdlib-js/stdlib/issues/7427)
 
 </section>
 
@@ -35,6 +35,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`484bc07`](https://github.com/stdlib-js/stdlib/commit/484bc07d6974d904855666b30728d618b2261e03) - **chore:** address commit comments for commit `340a147` [(#7434)](https://github.com/stdlib-js/stdlib/pull/7434) _(by Lokesh Ranjan)_
 -   [`e4d9557`](https://github.com/stdlib-js/stdlib/commit/e4d955774c09a9e1139396fd69e0913951755302) - **chore:** clean-up _(by Athan Reines)_
 -   [`340a147`](https://github.com/stdlib-js/stdlib/commit/340a147293f2fb18db097491154b83671c44bdd3) - **feat:** add C implementation for `@stdlib/stats-base/dists/planck/logcdf` [(#4936)](https://github.com/stdlib-js/stdlib/pull/4936) _(by Yuvi Mittal, Philipp Burckhardt, stdlib-bot)_
 -   [`054f4e5`](https://github.com/stdlib-js/stdlib/commit/054f4e520735bc1ad59e0f608bb588430463e913) - **docs:** fix descriptions _(by Athan Reines)_
@@ -50,10 +51,11 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Jaysukh Makvana
+-   Lokesh Ranjan
 -   Philipp Burckhardt
 -   Yuvi Mittal
 
