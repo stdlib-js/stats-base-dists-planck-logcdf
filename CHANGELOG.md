@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-21)
+## Unreleased (2025-09-07)
 
 <section class="features">
 
@@ -35,6 +35,9 @@ A total of 2 issues were closed in this release:
 
 <details>
 
+-   [`e2efe32`](https://github.com/stdlib-js/stdlib/commit/e2efe32914d0d9dae5da34e6f7e7bf7655430710) - **chore:** rename exported variable in d.ts file to match name used in example code _(by Philipp Burckhardt)_
+-   [`07f7c05`](https://github.com/stdlib-js/stdlib/commit/07f7c0522c73e6ad9505e1d45035ae439344200d) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`9c21fd2`](https://github.com/stdlib-js/stdlib/commit/9c21fd20ef8b8a6a88abb96d80ea6d8e4c5434eb) - **test:** use .strictEqual() instead of .equal() _(by Philipp Burckhardt)_
 -   [`484bc07`](https://github.com/stdlib-js/stdlib/commit/484bc07d6974d904855666b30728d618b2261e03) - **chore:** address commit comments for commit `340a147` [(#7434)](https://github.com/stdlib-js/stdlib/pull/7434) _(by Lokesh Ranjan)_
 -   [`e4d9557`](https://github.com/stdlib-js/stdlib/commit/e4d955774c09a9e1139396fd69e0913951755302) - **chore:** clean-up _(by Athan Reines)_
 -   [`340a147`](https://github.com/stdlib-js/stdlib/commit/340a147293f2fb18db097491154b83671c44bdd3) - **feat:** add C implementation for `@stdlib/stats-base/dists/planck/logcdf` [(#4936)](https://github.com/stdlib-js/stdlib/pull/4936) _(by Yuvi Mittal, Philipp Burckhardt, stdlib-bot)_
