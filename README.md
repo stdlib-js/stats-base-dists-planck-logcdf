@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Evaluate the logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution.
+> Evaluate the natural logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution.
 
 <section class="intro">
 
@@ -83,7 +83,7 @@ var logcdf = require( '@stdlib/stats-base-dists-planck-logcdf' );
 
 #### logcdf( x, lambda )
 
-Evaluates the logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution with shape parameter `lambda`.
+Evaluates the natural logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution with shape parameter `lambda`.
 
 ```javascript
 var y = logcdf( 2.0, 0.5 );
@@ -190,7 +190,7 @@ logEachMap( 'x: %0.4f, λ: %0.4f, ln(F(x;λ)): %0.4f', x, lambda, logcdf );
 
 #### stdlib_base_dists_planck_logcdf( x, lambda )
 
-Evaluates the logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution with shape parameter `lambda`.
+Evaluates the natural logarithm of the [cumulative distribution function][cdf] for a Planck (discrete exponential) distribution with shape parameter `lambda`.
 
 ```c
 double out = stdlib_base_dists_planck_logcdf( 2, 0.5 );
